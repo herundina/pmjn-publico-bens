@@ -1,0 +1,7 @@
+
+
+
+
+
+Pacote depende unicamente da camada de dominio
+e como ela, não depende de nenhum outra dependencia
