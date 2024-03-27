@@ -1,0 +1,178 @@
+<div class="card-header">
+  <h2>Cadastro de Funcionario</h2>
+</div>
+
+<div class="card-body">
+  <div>
+    <form
+      [formGroup]="formGroup"
+      (ngSubmit)="onSubmit()"
+      #formDir="ngForm"
+      class="form-inline"
+    >
+      <div class="row">
+        <div class="col-sm-6 md-3">
+          <label for="funcionario"
+            >Funcionário <span class="text-danger">*</span></label
+          >
+          <input
+            type="text"
+            id="funcionario"
+            class="form-control"
+            id="funcionario"
+            placeholder="Funcionário"
+            formControlName="funcionario"
+            required
+          />
+          <div
+            *ngIf="
+              funcionario?.invalid &&
+              (funcionario?.dirty || funcionario?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="funcionario?.errors?.['required']">
+              Informe o nome do Funcionário
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 md-3">
+          <label for="cpf">CPF <span class="text-danger">*</span></label>
+          <input
+            type="text"
+            formControlName="cpf"
+            [minlength]="11"
+            [maxlength]="11"
+            placeholder="00000000000"
+            id="cpf"
+            class="form-control"
+            required
+          />
+          <div
+            *ngIf="cpf?.invalid && (cpf?.dirty || cpf?.touched)"
+            class="text-danger"
+          >
+            <div *ngIf="cpf?.errors?.['required']">
+              O número do CPF é Campo obrigatório
+            </div>
+            <div *ngIf="cpf?.errors?.['minlength']">
+              informe apenas 11 digitos
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 md-3">
+          <label for="matricula"
+            >Matrícula <span class="text-danger">*</span></label
+          >
+          <input
+            type="text"
+            formControlName="matricula"
+            placeholder="000000"
+            [minlength]="5"
+            [maxlength]="5"
+            id="matricula"
+            class="form-control"
+            required
+          />
+          <div
+            *ngIf="
+              matricula?.invalid && (matricula?.dirty || matricula?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="matricula?.errors?.['required']">
+              Informe o número da Matrícula
+            </div>
+            <div *ngIf="matricula?.errors?.['minlength']">
+              Informe no mínimo cinco digitos
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 mb-3">
+          <label for="email">E-mail <span class="text-danger">*</span></label>
+          <input
+            type="email"
+            formControlName="email"
+            placeholder="email@juazeiro.ce.gov.br"
+            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+            id="email"
+            class="form-control"
+            required
+          />
+          <div
+            *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+            class="text-danger"
+          >
+            <div *ngIf="email?.errors?.['required']">
+              Informe o endereço de email
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mb-3">
+          <label for="secretaria"
+            >Secretaria <span class="text-danger">*</span></label
+          >
+          <select
+            formControlName="secretaria"
+            id="secretaria"
+            class="form-control"
+            required=""
+          >
+            <option selected value="">Selecione...</option>
+            <option value="Secretaria de Administracao">
+              SEAD - Secretaria de Administração
+            </option>
+          </select>
+          <div
+            *ngIf="
+              secretaria?.invalid && (secretaria?.dirty || secretaria?.touched)
+            "
+            class="text-danger"
+          >
+            <div *ngIf="secretaria?.errors?.['required']">
+              Informe o nome da Secretaria
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 mb-3">
+          <label for="setor">Setor <span class="text-danger">*</span></label>
+          <input
+            type="text"
+            formControlName="setor"
+            placeholder="Setor"
+            id="setor"
+            class="form-control"
+            required
+          />
+          <div
+            *ngIf="setor?.invalid && (setor?.dirty || setor?.touched)"
+            class="text-danger"
+          >
+            <div *ngIf="setor?.errors?.['required']">
+              Informe o nome do Setor
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="d-grid gap-1 col-6">
+          <button
+            type="submit"
+            [disabled]="!formGroup.valid"
+            class="btn btn-primary"
+          >
+            Cadastrar Certidão
+          </button>
+        </div>
+        <div class="d-grid gab-1 col-6">
+          <button type="button" [routerLink]="['/']" class="btn btn-warning">
+            Desistir de Cadastrar Funcionário
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

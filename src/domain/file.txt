@@ -1,9 +1,0 @@
-
-
-
-
-
-
-Pacote depende unicamente d a lógica de dominio,
-regras de negócio, sem depender de terceiros,
-incluindo nest, npm ou qqer outros pacote

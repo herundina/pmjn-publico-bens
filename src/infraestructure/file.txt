@@ -1,8 +1,0 @@
-
-
-
-
-contem toda estutura tecnica
-como aarquivo de configuração
-conexão ao banco de dados, serviço web, modulo npm
-tem dependencia de dominio, user cases e estruturas

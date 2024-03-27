@@ -1,0 +1,113 @@
+<div class="card-header">
+  <h2>Funcionario</h2>
+</div>
+
+<div class="card-body">
+  <div>
+    <form
+      action="/funcionario/update"
+      [formGroup]="formGroup"
+      (ngSubmit)="onSubmit()"
+      class="form-inline"
+      autocomplete="off"
+    >
+      <div *ngIf="funcionario$ | async as funcionario">
+        <div class="row">
+          <div class="col-sm-6 md-3">
+            <label for="funcionario">Funcionário</label>
+            <input
+              type="text"
+              formControlName="funcionario"
+              [(ngModel)]="funcionario.funcionario"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col-sm-3 md-3">
+            <label for="cpf">CPF</label>
+            <input
+              type="text"
+              placeholder="000.000.000-00"
+              id="cpf"
+              class="form-control"
+              form="cpf"
+              formControlName="cpf"
+              [(ngModel)]="funcionario.cpf"
+              required
+            />
+          </div>
+          <div class="col-sm-3 md-3">
+            <label for="matricula">Matrícula</label>
+            <input
+              type="text"
+              placeholder="000000"
+              id="matricula"
+              formControlName="matricula"
+              [(ngModel)]="funcionario.matricula"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              placeholder="email@juazeiro.ce.gov.br"
+              id="email"
+              formControlName="email"
+              [(ngModel)]="funcionario.email"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="secretaria">Secretaria</label>
+            <select
+              formControlName="secretaria"
+              id="secretaria"
+              class="form-control"
+              [(ngModel)]="funcionario.secretaria"
+              required
+            >
+              <option selected [value]="funcionario.secretaria">
+                {{ funcionario.secretaria }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-sm-3 mb-3">
+            <label for="setor">Setor</label>
+            <input
+              type="text"
+              placeholder="Setor"
+              id="setor"
+              formControlName="setor"
+              [(ngModel)]="funcionario.setor"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="d-grid gap-1 col-6">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              [disabled]="!formGroup.valid"
+            >
+              Cadastrar Certidão
+            </button>
+          </div>
+          <div class="d-grid gab-1 col-6">
+            <button type="button" [routerLink]="['/']" class="btn btn-warning">
+              Desistir de Cadastrar Certidão
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

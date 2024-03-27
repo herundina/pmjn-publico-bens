@@ -1,0 +1,63 @@
+<div class="card-header">
+  <h2>Cadastro de Certidão</h2>
+</div>
+<div class="card-body">
+  <div>
+    <form action="/certidao/novo" method="post" class="form-inline">
+      <input type="hidden" value="Puxar id" />
+      <em><strong>buscar bemPublico_id</strong></em>
+      <div class="row">
+        <div class="col-sm-6 mb-3">
+          <label for="matricula">Matricula</label>
+          <input
+            type="text"
+            placeholder="Matrícula"
+            id="matricula"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-6 mb-3">
+          <label for="cartorio">Cartório</label>
+          <input
+            type="text"
+            placeholder="Cartório"
+            id="cartorio"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 mb-3">
+          <label for="livro">Livro</label>
+          <input
+            type="text"
+            placeholder="Livro"
+            id="livro"
+            class="form-control"
+          />
+        </div>
+        <div class="col-sm-6 mb-3">
+          <label for="ficha">Ficha</label>
+          <input
+            type="text"
+            placeholder="Ficha"
+            id="ficha"
+            class="form-control"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="d-grid gap-1 col-6">
+          <button type="submit" class="btn btn-primary">
+            Cadastrar Certidão
+          </button>
+        </div>
+        <div class="d-grid gab-1 col-6">
+          <button type="button" class="btn btn-warning">
+            Desistir de Cadastrar Certidão
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

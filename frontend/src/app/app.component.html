@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <nav id="sidebar" class="sidebar">
+    <app-sidebar></app-sidebar>
+  </nav>
+  <div class="main">
+    <app-navbar></app-navbar>
+    <main class="content">
+      <div class="container-fluid">
+        <div class="header">
+          <h1 class="header-title">
+            Prefeitura Municipal de Juazeiro do Norte - CE
+          </h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <p class="header-subtitle">Gestão de Bem Público Municipal</p>
+              </li>
+              <li></li>
+            </ol>
+          </nav>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <app-footer></app-footer>
+    <!--Fim - Footer-->
+  </div>
+</div>

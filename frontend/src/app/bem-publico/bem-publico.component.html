@@ -1,0 +1,206 @@
+<div class="card-header">
+  <h2>Cadastro de Bem Público Municipal</h2>
+</div>
+<div class="card-body">
+  <button (click)="abrirWindow.emit()">clique bemPublico</button>
+  <div>
+    <form action="/bemPublico/novo" method="post" class="form-inline">
+      <div class="card-header">
+        <h2>Informação Cartório</h2>
+      </div>
+      <div class="card-body">
+        <input type="hidden" value="Puxar id" />
+        <em><strong>buscar bemPublico_id</strong></em>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label for="matricula">Matricula</label>
+            <input
+              type="text"
+              placeholder="Matrícula"
+              id="matricula"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label for="cartorio">Cartório</label>
+            <input
+              type="text"
+              placeholder="Cartório"
+              id="cartorio"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label for="livro">Livro</label>
+            <input
+              type="text"
+              placeholder="Livro"
+              id="livro"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label for="ficha">Ficha</label>
+            <input
+              type="text"
+              placeholder="Ficha"
+              id="ficha"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-header">
+        <h2>Informação Bem Público Municipal</h2>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label for="tipoBem">Tipo Bem</label>
+            <select name="tipoBem" class="form-control">
+              <option value="">Terreno</option>
+              <option value="">Praça</option>
+            </select>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <label for="municipio">Município</label>
+            <input
+              type="text"
+              value="Juazeiro do Norte - CE"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label for="logradouro">Logradouro</label>
+            <input
+              type="text"
+              placeholder="Logradoutro"
+              id="logradouro"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="numero">Número</label>
+            <input
+              type="text"
+              placeholder="Número"
+              id="numero"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="bairro">Bairro</label>
+            <input
+              type="text"
+              placeholder="Bairro"
+              id="bairro"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 mb-3">
+            <label for="complemento">Complemento</label>
+            <input
+              type="text"
+              placeholder="Complemento"
+              id="complemento"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-2 mb-3">
+            <label for="limiteNorte">Norte</label>
+            <input
+              type="text"
+              placeholder="Limite Norte"
+              id="limiteNorte"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-2 mb-3">
+            <label for="limiteSul">Sul</label>
+            <input
+              type="text"
+              placeholder="Limite Sul"
+              id="limiteSul"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-1 mb-3">
+            <label for="limiteLeste">Leste</label>
+            <input
+              type="text"
+              placeholder="Limite Leste"
+              id="limiteLeste"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-1 mb-3">
+            <label for="limiteOeste">Oeste</label>
+            <input
+              type="text"
+              placeholder="Limite Oeste"
+              id="limiteOeste"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 mb-3">
+            <label for="areadecomprimento">Área de Comprimento</label>
+            <input
+              type="text"
+              placeholder="Àrea de Comprimento"
+              id="areadecomprimento"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="areadelagura">Área de Largura</label>
+            <input
+              type="text"
+              placeholder="Àrea de Largura"
+              id="areadelagura"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="latitude">Latitude</label>
+            <input
+              type="text"
+              placeholder="Latitude"
+              id="latitude"
+              class="form-control"
+            />
+          </div>
+          <div class="col-sm-3 mb-3">
+            <label for="longetude">Longetude</label>
+            <input
+              type="text"
+              placeholder="Longetude"
+              id="longetude"
+              class="form-control"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="d-grid gap-1 col-6">
+          <button type="submit" class="btn btn-primary">
+            Cadastrar Bem Público
+          </button>
+        </div>
+        <div class="d-grid gab-1 col-6">
+          <button type="button" class="btn btn-warning">
+            Desistir de Cadastrar Bem Público
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
